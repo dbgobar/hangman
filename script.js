@@ -16,6 +16,7 @@ hideAll(); // not invoking, but referencing a function. at beginning, body is al
 //this function is for player1's word input
   $("#wordButton").on("click", function(evt){ //an event: something happens when you click
       evt.preventDefault();
+      resets();
       hangmanWord.inputWord =$("#wordField").val(); //wordField box collects userInput
       hangmanWord.wordArray = hangmanWord.inputWord.split(''); //the userInput word is split (spaced out by letter)
       console.log(hangmanWord.wordArray); //
@@ -50,6 +51,14 @@ hideAll(); // not invoking, but referencing a function. at beginning, body is al
 
     $("#letterField").val("");
 });
+
+function resets(){ //function to reset body/wordlength when inputing new word
+  $("#showWord").html(null);
+  hangmanWord.inputWord = [];
+  hangmanWord.underscoreWord = [];
+  hangmanWord.wordArray = [];
+  marshmallow.counter = -1
+}
 
 function hideAll (){
   $("#head").hide();
