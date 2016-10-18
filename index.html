@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Hangman</title>
+  <link type="text/css" href="style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+
+</head>
+<body>
+  <header>
+  <h1>Hangman</h1>
+
+  </header>
+
+<div id="container">
+  <div id="inputBox">
+    <button id="wordButton">Player one: Type in a word</button>
+    <input id = "wordField" autofocus placeholder = "Word"> </input>
+    <button id="letterButton">Player two: Guess a letter</button>
+    <input id="letterField" maxlength="1" autofocus placeholder ="Letter"> </input>
+  </div>
+  <div id="showWord"></div>
+</div>
+<div id="showGuesses">Guessed Letters: </div>
+  <br>
+
+<div id="hangman">
+
+  <div id="noose">
+    <img src = "images/gallow.png" alt="noose">
+  </div>
+
+    <div id="head">
+        <img id="mallow" src="images/marshmellow.png" alt="cute lil marshmellow">
+    </div>
+    <div id="mallowBody">
+      <img id="body" src="images/mellowbody.png" alt="hangman body">
+    </div>
+    <div id="leftstick">
+      <img id="lefthand" src="images/stick2.png" alt="left hand">
+    </div>
+    <div id="rightstick">
+      <img id="righthand" src="images/stick2.png" alt="right hand">
+    </div>
+    <div id="leftfoot1">
+      <img id="leftfoot2" src="images/stick2.png" alt="left shoe">
+    </div>
+    <div id="rightfoot1">
+      <img id="rightfoot2" src="images/stick2.png" alt="right shoe">
+    </div>
+  <div>
+
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+<script src = "script.js"> </script>
+</body>
+</html>

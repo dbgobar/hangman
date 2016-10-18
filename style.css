@@ -1,0 +1,147 @@
+body{
+  background-image: url("images/desk.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+#container{
+  display: inline-block;
+}
+#showWord{
+
+  width: 800px;
+  text-align: center;
+  font-size: 50px;
+}
+Header, #inputBox{
+  text-align: center;
+  color: black;
+  /*outline: 1px solid red;*/
+}
+button, input{
+  outline-color: #ffffb3;
+}
+#inputBox{
+  background: rgba(0,0,0,0.3);
+  padding: 25px;
+  border-radius: 15%;
+  margin-left: 50px;
+  margin-right: 80px;
+  width: 150px;
+  float: left;
+}
+#container{
+  margin-left: 50px;
+}
+Header{
+  font-family: 'Nothing You Could Do', cursive;
+  font-size:30px;
+  color: black;
+}
+#letterButton, #wordButton {
+  border-radius: 10%;
+  background: white;
+}
+#showGuesses{
+  font-size: 30px;
+  margin: auto;
+  margin-top: 30px;
+  margin-left: 100px;
+  font-family: 'Poiret One', cursive;
+}
+#noose img{
+  width: 280px;
+  height: 230px;
+  z-index:-2;
+  position: relative;
+  right: -380px;
+  top: -130px;
+}
+
+#hang{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: fixed;
+}
+
+/* Below: Css for Hangman body */
+#hangman{
+  height: 400px;
+  position: relative;
+  margin-left: 150px;
+}
+#head{
+  position: relative;
+  border-radius: 50%;
+  right: -510px;
+  bottom: 350px;
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+}
+#mallow{
+  width: 80px;
+  height: 80px;
+}
+#mallowBody{
+  position: relative;
+  transform: rotate(90deg);
+  top: -325px;
+  width: 100px;
+  left: 500px;
+  z-index: 1;
+}
+#body{
+  width: 80px;
+  height: 80px;
+  transform: rotate(-90deg);
+}
+#leftstick{
+  position: relative;
+  transform: rotate(-50deg);
+  top:-455px;
+  width:100px;
+  left: 466px;
+}
+#lefthand{
+  width: 40px;
+  height: 70px;
+  z-index:-2;
+}
+#rightstick{
+  position: relative;
+  transform: rotate(120deg);
+  top:-470px;
+  width:100px;
+  left: 540px;
+}
+#righthand{
+  width: 40px;
+  height: 70px;
+}
+#leftfoot1{
+  position: relative;
+  transform: rotate(-130deg);
+  top:-537px;
+  width:100px;
+  left: 454px;
+  z-index: -1;
+}
+#leftfoot2{
+  width: 40px;
+  height: 70px;
+}
+  #rightfoot1{
+    position: relative;
+    transform: rotate(-190deg);
+    top:-583px;
+    width:100px;
+    left: 508px;
+    z-index: -4;
+  }
+  #rightfoot2{
+    width: 40px;
+    height: 70px;
+}
