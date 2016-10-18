@@ -17,4 +17,4 @@
       -the body parts added should be images instead of lines.
       -when you win there should be an animation or popup.
   3. Unsolved problems:
-    I wasn't able to write a code that added a score or 
+    -I wasn't able to write a code that added a score or 
