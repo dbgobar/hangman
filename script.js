@@ -14,7 +14,7 @@ var marshmallow = { //global variable, for showing/hiding body parts
 
 hideAll(); // not invoking, but referencing a function. at beginning, body is already hidden
 //this function is for player1's word input
-  $("#wordButton").on("click", function(evt){ //an event: something happens when you click
+  $("#submitword").on("submit", function(evt){ //an event: something happens when you click
       evt.preventDefault();
       resets();
       hangmanWord.inputWord =$("#wordField").val(); //wordField box collects userInput
@@ -30,7 +30,7 @@ hideAll(); // not invoking, but referencing a function. at beginning, body is al
   });
 
 //function for player2's letter input
- $("#letterButton").on("click", function(evt){
+ $("#submitletter").on("submit", function(evt){ //changed "click" to submit (add form in html) so it submits on *enter
       evt.preventDefault();
       var userInput = $("#letterField").val();
       $("#showGuesses").append("<b> "+ userInput + "</b>");

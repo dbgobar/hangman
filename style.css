@@ -4,7 +4,10 @@ body{
   background-size: cover;
   background-position: center center;
 }
-
+h3{
+  font-size: 10px;
+  background-color: rgba(255, 0, 0, 0.2);
+}
 #container{
   display: inline-block;
 }
@@ -39,10 +42,7 @@ Header{
   font-size:30px;
   color: black;
 }
-#letterButton, #wordButton {
-  border-radius: 10%;
-  background: white;
-}
+
 #showGuesses{
   font-size: 30px;
   margin: auto;
