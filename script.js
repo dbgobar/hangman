@@ -11,16 +11,18 @@ var marshmallow = { //global variable, for showing/hiding body parts
   bodyParts: ["#head", "#mallowBody", "#leftstick", "#rightstick", "#leftfoot1", "#rightfoot1"],
   counter: -1 //-1 means it starts below 0 (the head)...adding 1 will show the first body part
 }
-
+// this is invoking the function , but if it starts hidden no reason to reference/invoke it
 hideAll(); // not invoking, but referencing a function. at beginning, body is already hidden
 //this function is for player1's word input
   $("#submitword").on("submit", function(evt){ //an event: something happens when you click
       evt.preventDefault();
       resets();
+      // consider abstracting this into its own function
       hangmanWord.inputWord =$("#wordField").val(); //wordField box collects userInput
       hangmanWord.wordArray = hangmanWord.inputWord.split(''); //the userInput word is split (spaced out by letter)
       console.log(hangmanWord.wordArray); //
       for(i=0; i<hangmanWord.wordArray.length; i++){ //use for loop for the split word
+        // whats the neccessity of the space before/after the underscore? seems like a stylistic choice(aka belongs in css)
         hangmanWord.underscoreWord[i]=" _ "; //create a name for the word and spaces (var above) called hangmanWord. the underscoreWord is new
         console.log(hangmanWord.underscoreWord); //this for will show up in console.log
         $("#showWord").html(hangmanWord.underscoreWord); //this will show the spaces in the html
@@ -31,6 +33,7 @@ hideAll(); // not invoking, but referencing a function. at beginning, body is al
 
 //function for player2's letter input
  $("#submitletter").on("submit", function(evt){ //changed "click" to submit (add form in html) so it submits on *enter
+ // some slight indentation issues here
       evt.preventDefault();
       var userInput = $("#letterField").val();
       $("#showGuesses").append("<b> "+ userInput + "</b>");
@@ -52,6 +55,7 @@ hideAll(); // not invoking, but referencing a function. at beginning, body is al
     $("#letterField").val("");
 });
 
+// i like these functions here that reset state in your application
 function resets(){ //function to reset body/wordlength when inputing new word
   $("#showWord").html(null);
   hangmanWord.inputWord = [];
